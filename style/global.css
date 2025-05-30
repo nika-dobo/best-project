@@ -227,12 +227,13 @@ body .bk .navigation nav input {
   position: absolute;
   top: 60px;
   right: 65px;
-  width: 200px;
+  width: 250px;
   height: 17px;
   border-radius: 20px;
   border: 1.5px #18457b solid;
   background: #4d94ec;
   color: #4de3ec;
+  display: none;
 }
 body .bk .navigation nav input::-moz-placeholder {
   color: #4de3ec;
@@ -240,10 +241,10 @@ body .bk .navigation nav input::-moz-placeholder {
 body .bk .navigation nav input::placeholder {
   color: #4de3ec;
 }
-body .bk .navigation nav input-see {
-  display: inline;
+body .bk .navigation nav .input-view {
+  display: inline-block;
 }
-body .bk .navigation nav input-hidden {
+body .bk .navigation nav .input-hidden {
   display: none;
 }
 body .bk .navigation nav a {

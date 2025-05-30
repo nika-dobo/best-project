@@ -96,21 +96,21 @@ body {
           position: absolute;
           top: 60px;
           right: 65px;
-          width: 200px;
+          width: 250px;
           height: 17px;
           border-radius: 20px;
           border: 1.5px #18457b solid;
           background: #4d94ec;
           color: #4de3ec;
-          
+          display: none;
         }
         input::placeholder {
           color: #4de3ec;
         }
-        input-see{
-          display: inline;
+        .input-view {
+          display: inline-block;
         }
-        input-hidden{
+        .input-hidden {
           display: none;
         }
         a {
