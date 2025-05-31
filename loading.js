@@ -43,7 +43,7 @@ window.addEventListener("resize", () => {
 // Text Animation
 const texts = [
   { elementId: "h1", finalText: "Hello" },
-  { elementId: "p", finalText: "Welcome!! \n to programing language website" },
+  { elementId: "p", finalText: "Welcome \n to a programing language website!!" },
   { elementId: "button", finalText: "Go to website" },
 ];
 
