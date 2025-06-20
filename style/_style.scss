@@ -59,9 +59,12 @@
     box-shadow: 3px 3px 10px #4de3ec;
   }
 }
+
+// main page
+
 body {
   font-family: "Source Code Pro";
-  background: #000000;
+  background: rgb(3, 25, 48);
   color: #4de3ec;
   .bk {
     width: 100%;
@@ -70,13 +73,13 @@ body {
     background-size: cover;
     mask-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 1) 60%,
-      rgba(0, 0, 0, 0)
+      rgba(32, 51, 73, 1) 60%,
+      rgba(32, 51, 73, 0)
     );
     -webkit-mask-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 1) 60%,
-      rgba(0, 0, 0, 0)
+      rgba(32, 51, 73, 1) 60%,
+      rgba(32, 51, 73, 0)
     );
 
     .navigation {
@@ -152,23 +155,129 @@ body {
       h1 {
         padding-top: 100px;
         font-size: 60px;
+        line-height: 70px;
+        font-weight: 500;
+        letter-spacing: 6px;
+        text-shadow: 4px 4px 10px #0000007a;
       }
     }
   }
-  .s-1 {
-    margin-top: 130px;
-    background: rgb(0, 0, 0);
-    .circle {
-      border-radius: 0px 50% 50% 9px;
-      overflow: hidden;
-      width: 800px;
-      height: 650px;
-      background: url(/img/cr.png);
-      background-size: cover;
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .first {
+      width: 100%;
       position: absolute;
-      margin-left: -325px;
-      img {
+      z-index: -2;
+      opacity: 0.1;
+      mask-image: linear-gradient(
+        to top,
+        rgba(32, 51, 73, 1) 60%,
+        rgba(32, 51, 73, 0)
+      );
+      
+    }
+    .second {
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      transform: rotate(180deg);
+      opacity: 0.1;
+      mask-image: linear-gradient(
+        to bottom,
+        rgba(32, 51, 73, 1) 60%,
+        rgba(32, 51, 73, 0)
+      );
+      
+    }
+
+    .title-1 {
+      margin-top: 100px;
+      font-size: 45px;
+      font-weight: 500;
+    }
+    .s-1 {
+      width: 60%;
+      margin-top: 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 200px 200px 200px;
+      gap: 10px;
+      justify-content: center;
+      align-content: center;
+      a {
+        width: 100%;
+        height: 100%;
+      }
+      .a1 {
+        grid-column: 1/3;
+      }
+      .a5 {
+        grid-column: 2/3;
+        grid-row: 2/4;
+      }
+      .a6 {
+        grid-column: 3/5;
+        grid-row: 2/4;
+      }
+      div {
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .box1 {
+        background: url(/img/js.jpg) center;
+        background-size: cover;
+      }
+      .box2 {
+        background: url(/img/c++.jpg) center;
+        background-size: cover;
+      }
+      .box3 {
+        background: url(/img/c.jpg) center;
+        background-size: cover;
+      }
+      .box4 {
+        background: url(/img/html.jpg) center;
+        background-size: cover;
+      }
+      .box5 {
+        background: url(/img/py.jpg) center;
+        background-size: cover;
+      }
+      .box6 {
+        background: url(/img/cc.jpg) center;
+        background-size: cover;
+      }
+      .box7 {
+        background: url(/img/css.png) center #1e1e1e;
+        background-size: cover;
+      }
+    }
+    .s-2 {
+      margin-top: 85px;
+      width: 100%;
+      .first {
+        width: 100%;
+        position: absolute;
+        z-index: -2;
+        opacity: 0.1;
+        transform: rotateX(180deg);
+      }
+      .second {
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        transform: rotateY(180deg);
         
+        opacity: 0.1;
       }
     }
   }
