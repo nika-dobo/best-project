@@ -225,22 +225,42 @@ body .bk .navigation nav .material-symbols-outlined {
   font-size: 20px;
   cursor: pointer;
 }
-body .bk .navigation nav input {
+body .bk .navigation nav .input {
   position: absolute;
   top: 60px;
   right: 65px;
   width: 250px;
-  height: 17px;
-  border-radius: 20px;
-  border: 1.5px #18457b solid;
-  background: #4d94ec;
-  color: #4de3ec;
-  display: none;
-}
-body .bk .navigation nav input::-moz-placeholder {
+  background-color: #1a1a1a;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
   color: #4de3ec;
 }
-body .bk .navigation nav input::placeholder {
+body .bk .navigation nav .input:focus {
+  animation: rotateShadow 2s infinite linear;
+}
+@keyframes rotateShadow {
+  0% {
+    box-shadow: -2px -2px 0px 0px #aa00ff, 2px 2px 0px 0px #3700ff;
+  }
+  25% {
+    box-shadow: -2px 2px 0px 0px #aa00ff, 2px -2px 0px 0px #3700ff;
+  }
+  50% {
+    box-shadow: 2px 2px 0px 0px #aa00ff, -2px -2px 0px 0px #3700ff;
+  }
+  75% {
+    box-shadow: 2px -2px 0px 0px #aa00ff, -2px 2px 0px 0px #3700ff;
+  }
+  100% {
+    box-shadow: -2px -2px 0px 0px #aa00ff, 2px 2px 0px 0px #3700ff;
+  }
+}
+body .bk .navigation nav .input::-moz-placeholder {
+  color: #4de3ec;
+}
+body .bk .navigation nav .input::placeholder {
   color: #4de3ec;
 }
 body .bk .navigation nav .input-view {
