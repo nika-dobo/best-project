@@ -135,6 +135,36 @@ a {
   text-decoration: none;
 }
 
+p::-moz-selection {
+  background-color: rgba(77, 228, 236, 0.3568627451);
+  color: #000000;
+}
+
+p::selection {
+  background-color: rgba(77, 228, 236, 0.3568627451);
+  color: #000000;
+}
+
+h1::-moz-selection {
+  background-color: rgba(77, 228, 236, 0.3568627451);
+  color: #000000;
+}
+
+h1::selection {
+  background-color: rgba(77, 228, 236, 0.3568627451);
+  color: #000000;
+}
+
+a::-moz-selection {
+  background-color: rgba(77, 228, 236, 0.3568627451);
+  color: #000000;
+}
+
+a::selection {
+  background-color: rgba(77, 228, 236, 0.3568627451);
+  color: #000000;
+}
+
 .loading {
   background: #000000;
   display: flex;
@@ -458,6 +488,35 @@ body main .s-2 .main .info .hexagon {
   background-color: #5fe0e9;
   position: relative;
   margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .s-2 .main .info .img-size1 img {
+  top: -70px;
+  position: absolute;
+  height: 200%;
+  z-index: 2;
+}
+body main .s-2 .main .info .img-size2 img {
+  top: -40px;
+  position: absolute;
+  height: 150%;
+  z-index: 2;
+}
+body main .s-2 .main .info .img-size3 img {
+  top: -40px;
+  left: 7px;
+  position: absolute;
+  height: 150%;
+  z-index: 2;
+}
+body main .s-2 .main .info .img-size4 img {
+  top: -44px;
+  left: 8px;
+  position: absolute;
+  height: 150%;
+  z-index: 2;
 }
 body main .s-2 .main .info .hexagon:before,
 body main .s-2 .main .info .hexagon:after {
@@ -484,7 +543,10 @@ body main .s-2 .main .info .info-box {
 }
 body main .s-2 .main .info .info-box h1 {
   font-size: 23px;
+  font-weight: 600;
 }
 body main .s-2 .main .info .info-box p {
-  line-height: 23px;
+  width: 105%;
+  line-height: 22px;
+  font-size: 15.5px;
 }/*# sourceMappingURL=global.css.map */

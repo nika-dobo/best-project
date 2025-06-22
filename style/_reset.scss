@@ -127,3 +127,16 @@ table {
 a {
   text-decoration: none;
 }
+
+p::selection {
+  background-color: #4de4ec5b;
+  color: #000000;
+}
+h1::selection {
+  background-color: #4de4ec5b;
+  color: #000000;
+}
+a::selection {
+  background-color: #4de4ec5b;
+  color: #000000;
+}
