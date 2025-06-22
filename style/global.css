@@ -227,6 +227,7 @@ body .bk .navigation nav .material-symbols-outlined {
 }
 body .bk .navigation nav .input {
   position: absolute;
+  display: none;
   top: 60px;
   right: 65px;
   width: 250px;
@@ -265,9 +266,18 @@ body .bk .navigation nav .input::placeholder {
 }
 body .bk .navigation nav .input-view {
   display: inline-block;
+  animation: 0.5s opacity linear;
 }
 body .bk .navigation nav .input-hidden {
   display: none;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 body .bk .navigation nav a {
   color: #4de3ec;
@@ -403,17 +413,78 @@ body main .s-2 {
   margin-top: 85px;
   width: 100%;
 }
-body main .s-2 .first {
+body main .s-2 .first-2 {
   width: 100%;
   position: absolute;
   z-index: -2;
   opacity: 0.1;
   transform: rotateX(180deg);
 }
-body main .s-2 .second {
+body main .s-2 .second-2 {
   width: 100%;
   position: absolute;
   z-index: -1;
   transform: rotateY(180deg);
   opacity: 0.1;
+}
+body main .s-2 .main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .s-2 .main .title-2 {
+  text-align: center;
+  width: 600px;
+  font-size: 45px;
+  margin-top: 150px;
+  margin-bottom: 75px;
+}
+body main .s-2 .main .info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+body main .s-2 .main .info .line {
+  margin-top: 75px;
+  width: 1px;
+  height: 530px;
+  background-color: rgb(95, 224, 233);
+}
+body main .s-2 .main .info .hexagon {
+  width: 250px;
+  height: 160px;
+  background-color: #5fe0e9;
+  position: relative;
+  margin: 100px auto;
+}
+body main .s-2 .main .info .hexagon:before,
+body main .s-2 .main .info .hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+}
+body main .s-2 .main .info .hexagon:before {
+  bottom: 100%;
+  border-bottom: 50px solid #5fe0e9;
+}
+body main .s-2 .main .info .hexagon:after {
+  top: 100%;
+  border-top: 50px solid #5fe0e9;
+}
+body main .s-2 .main .info .info-box {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 20px;
+}
+body main .s-2 .main .info .info-box h1 {
+  font-size: 23px;
+}
+body main .s-2 .main .info .info-box p {
+  line-height: 23px;
 }/*# sourceMappingURL=global.css.map */
