@@ -7,7 +7,7 @@ canvas.width = window.innerWidth;
 
 const letters =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+=-[]{}|;:,.<>?";
-const fontSize = 10;
+const fontSize = 12;
 const columns = canvas.width / fontSize;
 
 const drops = [];
@@ -39,6 +39,9 @@ window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
+
+
+
 
 // Text Animation
 const texts = [
