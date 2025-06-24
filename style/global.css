@@ -414,6 +414,10 @@ body main .s-1 div {
   background-color: red;
   border-radius: 5px;
   overflow: hidden;
+  transition: all 0.2s;
+}
+body main .s-1 div:hover {
+  transform: scale(1.05);
 }
 body main .s-1 .box1 {
   background: url(/img/js.jpg) center;
@@ -541,9 +545,17 @@ body main .s-3 .main-circle .info h2 {
   color: white;
   text-shadow: 0px 0px 25px #4de3ec;
   font-size: 1.2rem;
+  transition: all 0.2s;
+}
+body main .s-3 .main-circle .info h2:hover {
+  transform: scale(1.05);
 }
 body main .s-3 .main-circle .info p {
   line-height: 20px;
+  transition: all 0.2s;
+}
+body main .s-3 .main-circle .info p:hover {
+  transform: scale(1.05);
 }
 body main .s-3 .main-circle .in1 {
   top: 1120px;

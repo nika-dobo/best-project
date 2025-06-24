@@ -265,6 +265,10 @@ body {
         background-color: red;
         border-radius: 5px;
         overflow: hidden;
+        transition: all 0.2s;
+      }
+      div:hover {
+        transform: scale(1.05);
       }
       .box1 {
         background: url(/img/js.jpg) center;
@@ -319,6 +323,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+
         .circle {
           display: flex;
           flex-direction: column;
@@ -390,9 +395,17 @@ body {
             color: white;
             text-shadow: 0px 0px 25px #4de3ec;
             font-size: 1.2rem;
+            transition: all 0.2s;
+          }
+          h2:hover {
+            transform: scale(1.05);
           }
           p {
             line-height: 20px;
+            transition: all 0.2s;
+          }
+          p:hover {
+            transform: scale(1.05);
           }
         }
         .in1 {
