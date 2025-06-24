@@ -46,9 +46,6 @@ center,
 dl,
 dt,
 dd,
-ol,
-ul,
-li,
 fieldset,
 form,
 label,
@@ -105,10 +102,7 @@ section {
 body {
   line-height: 1;
 }
-ol,
-ul {
-  list-style: none;
-}
+
 blockquote,
 q {
   quotes: none;
@@ -132,11 +126,17 @@ p::selection {
   background-color: #4de4ec5b;
   color: #000000;
 }
-h1::selection {
+h1::selection,
+h2::selection,
+h3::selection {
   background-color: #4de4ec5b;
   color: #000000;
 }
 a::selection {
+  background-color: #4de4ec5b;
+  color: #000000;
+}
+br::selection {
   background-color: #4de4ec5b;
   color: #000000;
 }
