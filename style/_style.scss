@@ -362,7 +362,7 @@ body {
           }
           .box-line {
             width: 100px;
-            height: 5px;
+            height: 10px;
             border: 3px #4de3ec solid;
             border-radius: 1px;
           }
@@ -682,6 +682,16 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    h2:hover,
+    h1:hover,
+    p:hover {
+      transform: scale(1.02);
+    }
+    h2,
+    h1,
+    p {
+      transition: all 0.2s;
+    }
     .s-1 {
       width: 100%;
       display: flex;
@@ -735,7 +745,7 @@ body {
             background-color: rgb(59, 58, 63);
             .in {
               position: relative;
-              background-color: #fff;
+              background-color: #42bdc6;
               height: 2.5px;
               p {
                 position: absolute;
@@ -769,6 +779,7 @@ body {
           text-align: center;
           h1 {
             font-size: 3rem;
+            transition: all 0.2s;
             b {
               font-size: 1rem;
             }
@@ -1003,18 +1014,26 @@ body {
     flex-direction: row;
     justify-content: center;
     gap: 200px;
+
     .box {
       border-radius: 15px;
       border-top: #42bdc6 3px solid;
       width: 400px;
-      height: 420px;
+      height: 440px;
       background-color: #131524;
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 30px;
       box-shadow: 0px 0px 30px #00000075;
+      h1 {
+        font-size: 1.5rem;
+        transition: all 0.2s;
+      }
+      h1:hover {
+        transform: scale(1.05);
+      }
       button {
         background: #000000;
         color: #42bdc6;
@@ -1026,8 +1045,9 @@ body {
         box-shadow: 0px 0px 20px #42bdc669;
         transition: all 0.2s;
         font-size: 1.1rem;
+        font-weight: 700;
       }
-      button:hover{
+      button:hover {
         box-shadow: 0px 0px 50px #42bdc669;
         transform: scale(1.05);
       }
@@ -1223,14 +1243,23 @@ body {
           p {
             font-size: 0.8rem;
             font-weight: 300;
+            transition: all 0.2s;
+            margin-bottom: 5px;
+          }
+          p:hover {
+            transform: scale(1.05);
           }
           h2 {
             color: rgb(0, 200, 0);
             font-size: 0.85rem;
+            transition: all 0.2s;
             b {
               color: white;
               font-size: 1rem;
             }
+          }
+          h2:hover {
+            transform: scale(1.05);
           }
           .box-in {
             background-color: #61199b;
@@ -1320,15 +1349,33 @@ body {
             justify-content: space-between;
             padding: 20px;
             border-radius: 10px;
+            transition: all 0.2s;
             div {
               text-align: center;
               h2 {
-                margin: 5px;
+                text-align: center;
+                transition: all 0.2s;
+              }
+              h2:hover {
+                transform: scale(1.05);
+              }
+              p {
+                transition: all 0.2s;
+              }
+              p:hover {
+                transform: scale(1.05);
               }
             }
             p {
+              transition: all 0.2s;
               text-align: center;
             }
+            p:hover {
+              transform: scale(1.1);
+            }
+          }
+          .persent:hover {
+            transform: scale(1.05);
           }
         }
         .user {
@@ -1358,14 +1405,26 @@ body {
                 width: 175px;
                 padding: 20px;
                 border-radius: 10px;
+                transition: all 0.2s;
                 h2 {
                   font-size: 1.2rem;
                   font-weight: 700;
+                  transition: all 0.2s;
+                }
+                h2:hover {
+                  transform: scale(1.05);
                 }
                 p {
                   font-size: 0.8rem;
                   font-weight: 400;
+                  transition: all 0.2s;
                 }
+                p:hover {
+                  transform: scale(1.05);
+                }
+              }
+              .box:hover {
+                transform: scale(1.05);
               }
             }
             .circle {
@@ -1381,6 +1440,10 @@ body {
                 font-weight: 900;
                 font-size: 1.5rem;
                 text-align: center;
+                transition: all 0.2s;
+              }
+              h2:hover {
+                transform: scale(1.05);
               }
               h2::before {
                 text-align: center;
@@ -1514,6 +1577,349 @@ body {
         font-weight: bold;
         margin-bottom: 30px;
         color: #ffffff;
+      }
+    }
+  }
+  .sing_up {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    section {
+      width: 600px;
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      background-color: #131524;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0px 0px 15px #37a5ab62;
+      h1 {
+        font-size: 2rem;
+      }
+      p{
+        margin-top: -10px;
+        a{
+          color: #458fff;
+        }
+      }
+      input[type="submit"] {
+        width: 520px;
+        background-color: #00000f;
+        color: #4de3ec;
+        padding: 10px;
+        border: 1px #4de3ec solid;
+        border-radius: 10px;
+        margin-top: 20px;
+        box-shadow: 0px 0px 10px #4de4ec65;
+        transition: all 0.2s;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        box-shadow: 0px 0px 20px #4de4ec65;
+        transform: scale(1.05);
+      }
+
+      input {
+        margin-bottom: 20px;
+      }
+      .name {
+        display: flex;
+        gap: 20px;
+        .nebula-input {
+          position: relative;
+          width: 250px;
+        }
+        .nebula-input .input {
+          width: 100%;
+          padding: 15px;
+          border: 2px solid #2a2a3a;
+          background: #00000f;
+          color: white;
+          font-size: 16px;
+          outline: none;
+          border-radius: 8px;
+          transition: all 0.4s ease-out;
+        }
+
+        .nebula-input .user-label {
+          position: absolute;
+          left: 15px;
+          top: 15px;
+          pointer-events: none;
+          color: #6a6a8a;
+          transition: all 0.4s ease-out;
+          background: #00000f;
+          padding: 0 5px;
+        }
+
+        .nebula-input .input:focus {
+          border-color: #b56aff;
+          box-shadow: 0 5px 8px rgba(181, 106, 255, 0.3),
+            0 10px 20px rgba(181, 106, 255, 0.2),
+            0 15px 40px rgba(181, 106, 255, 0.15),
+            0 20px 60px rgba(181, 106, 255, 0.1);
+        }
+
+        .nebula-input .input:focus ~ .user-label,
+        .nebula-input .input:valid ~ .user-label {
+          transform: translateY(-25px);
+          font-size: 12px;
+          color: #d18cff;
+          left: 10px;
+        }
+
+        .nebula-particle {
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          pointer-events: none;
+          opacity: 0;
+          top: 50%;
+          left: 10px;
+          filter: blur(0.8px);
+          mix-blend-mode: screen;
+          transition: opacity 0.3s ease;
+        }
+
+        .nebula-input .input:focus ~ .nebula-particle {
+          animation: nebula-float 2s forwards ease-out;
+        }
+
+        @keyframes nebula-float {
+          0% {
+            transform: translate(0, -50%) scale(0.8);
+            opacity: 0;
+            background: #c774ff;
+          }
+          20% {
+            opacity: 0.8;
+          }
+          100% {
+            transform: translate(calc(var(--x) * 140px), calc(var(--y) * 35px))
+              scale(1.1);
+            opacity: 0;
+            background: #6df2ff;
+          }
+        }
+      }
+      .nebula-input {
+        position: relative;
+        width: 520px;
+      }
+
+      .nebula-input .input {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #2a2a3a;
+        background: #00000f;
+        color: white;
+        font-size: 16px;
+        outline: none;
+        border-radius: 8px;
+        transition: all 0.4s ease-out;
+      }
+
+      .nebula-input .user-label {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        pointer-events: none;
+        color: #6a6a8a;
+        transition: all 0.4s ease-out;
+        background: #00000f;
+        padding: 0 5px;
+      }
+
+      .nebula-input .input:focus {
+        border-color: #b56aff;
+        box-shadow: 0 5px 8px rgba(181, 106, 255, 0.3),
+          0 10px 20px rgba(181, 106, 255, 0.2),
+          0 15px 40px rgba(181, 106, 255, 0.15),
+          0 20px 60px rgba(181, 106, 255, 0.1);
+      }
+
+      .nebula-input .input:focus ~ .user-label,
+      .nebula-input .input:valid ~ .user-label {
+        transform: translateY(-25px);
+        font-size: 12px;
+        color: #d18cff;
+        left: 10px;
+      }
+
+      .nebula-particle {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        pointer-events: none;
+        opacity: 0;
+        top: 50%;
+        left: 10px;
+        filter: blur(0.8px);
+        mix-blend-mode: screen;
+        transition: opacity 0.3s ease;
+      }
+
+      .nebula-input .input:focus ~ .nebula-particle {
+        animation: nebula-float 2s forwards ease-out;
+      }
+
+      @keyframes nebula-float {
+        0% {
+          transform: translate(0, -50%) scale(0.8);
+          opacity: 0;
+          background: #c774ff;
+        }
+        20% {
+          opacity: 0.8;
+        }
+        100% {
+          transform: translate(calc(var(--x) * 140px), calc(var(--y) * 35px))
+            scale(1.1);
+          opacity: 0;
+          background: #6df2ff;
+        }
+      }
+      .checkbox-wrapper {
+        display: flex;
+        align-items: center;
+      }
+      .checkbox-wrapper::after {
+        content: "I agree with Terms and Privacy Policy";
+        margin-left: 20px;
+      }
+
+      .checkbox-wrapper * {
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+      }
+
+      .checkbox-wrapper input[type="checkbox"] {
+        display: none;
+      }
+
+      .checkbox-wrapper label {
+        --size: 20px;
+        --shadow: calc(var(--size) * 0.07) calc(var(--size) * 0.1);
+        position: relative;
+        display: inline-block;
+        width: var(--size);
+        height: var(--size);
+        background-color: #4158d0;
+        background-image: linear-gradient(
+          43deg,
+          #4158d0 0%,
+          #c850c0 46%,
+          #ffcc70 100%
+        );
+        border-radius: 50%;
+        box-shadow: 0 var(--shadow) #ffbeb8;
+        cursor: pointer;
+        transition: 0.2s ease transform, 0.2s ease background-color,
+          0.2s ease box-shadow;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .checkbox-wrapper label:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        width: calc(var(--size) * 0.7);
+        height: calc(var(--size) * 0.7);
+        margin: 0 auto;
+        background-color: #fff;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        box-shadow: inset 0 var(--shadow) #ffbeb8;
+        transition: 0.2s ease width, 0.2s ease height;
+      }
+
+      .checkbox-wrapper label:hover:before {
+        width: calc(var(--size) * 0.55);
+        height: calc(var(--size) * 0.55);
+        box-shadow: inset 0 var(--shadow) #ff9d96;
+      }
+
+      .checkbox-wrapper label:active {
+        transform: scale(0.9);
+      }
+
+      .checkbox-wrapper .tick_mark {
+        position: absolute;
+        top: -1px;
+        right: 0;
+        left: calc(var(--size) * -0.05);
+        width: calc(var(--size) * 0.6);
+        height: calc(var(--size) * 0.6);
+        margin: 0 auto;
+        margin-left: calc(var(--size) * 0.14);
+        transform: rotateZ(-40deg);
+      }
+
+      .checkbox-wrapper .tick_mark:before,
+      .checkbox-wrapper .tick_mark:after {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        border-radius: 2px;
+        opacity: 0;
+        transition: 0.2s ease transform, 0.2s ease opacity;
+      }
+
+      .checkbox-wrapper .tick_mark:before {
+        left: 0;
+        bottom: 0;
+        width: calc(var(--size) * 0.1);
+        height: calc(var(--size) * 0.3);
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.23);
+        transform: translateY(calc(var(--size) * -0.68));
+      }
+
+      .checkbox-wrapper .tick_mark:after {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: calc(var(--size) * 0.1);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.23);
+        transform: translateX(calc(var(--size) * 0.78));
+      }
+
+      .checkbox-wrapper input[type="checkbox"]:checked + label {
+        background-color: #4158d0;
+        background-image: linear-gradient(
+          43deg,
+          #4158d0 0%,
+          #c850c0 46%,
+          #ffcc70 100%
+        );
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+          rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      }
+
+      .checkbox-wrapper input[type="checkbox"]:checked + label:before {
+        width: 0;
+        height: 0;
+      }
+
+      .checkbox-wrapper
+        input[type="checkbox"]:checked
+        + label
+        .tick_mark:before,
+      .checkbox-wrapper
+        input[type="checkbox"]:checked
+        + label
+        .tick_mark:after {
+        transform: translate(0);
+        opacity: 1;
       }
     }
   }

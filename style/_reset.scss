@@ -123,28 +123,28 @@ a {
   text-decoration: none;
 }
 
-p::selection {
-  background-color: #4de4ec5b;
-  color: #000000;
-}
-b::selection {
-  background-color: #4de4ec5b;
-  color: #000000;
-}
 h1::selection,
 h2::selection,
 h3::selection,
 h4::selection,
 h5::selection,
-h6::selection {
+h6::selection,
+a::selection,
+br::selection,
+b::selection,
+p::selection,
+img::selection {
   background-color: #4de4ec5b;
   color: #000000;
 }
-a::selection {
-  background-color: #4de4ec5b;
-  color: #000000;
-}
-br::selection {
-  background-color: #4de4ec5b;
-  color: #000000;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+b {
+  cursor: context-menu;
 }

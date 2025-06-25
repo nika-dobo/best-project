@@ -128,27 +128,7 @@ a {
   text-decoration: none;
 }
 
-p::-moz-selection {
-  background-color: rgba(77, 228, 236, 0.3568627451);
-  color: #000000;
-}
-
-p::selection {
-  background-color: rgba(77, 228, 236, 0.3568627451);
-  color: #000000;
-}
-
-b::-moz-selection {
-  background-color: rgba(77, 228, 236, 0.3568627451);
-  color: #000000;
-}
-
-b::selection {
-  background-color: rgba(77, 228, 236, 0.3568627451);
-  color: #000000;
-}
-
-h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection {
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, a::-moz-selection, br::-moz-selection, b::-moz-selection, p::-moz-selection, img::-moz-selection {
   background-color: rgba(77, 228, 236, 0.3568627451);
   color: #000000;
 }
@@ -158,29 +138,25 @@ h2::selection,
 h3::selection,
 h4::selection,
 h5::selection,
-h6::selection {
+h6::selection,
+a::selection,
+br::selection,
+b::selection,
+p::selection,
+img::selection {
   background-color: rgba(77, 228, 236, 0.3568627451);
   color: #000000;
 }
 
-a::-moz-selection {
-  background-color: rgba(77, 228, 236, 0.3568627451);
-  color: #000000;
-}
-
-a::selection {
-  background-color: rgba(77, 228, 236, 0.3568627451);
-  color: #000000;
-}
-
-br::-moz-selection {
-  background-color: rgba(77, 228, 236, 0.3568627451);
-  color: #000000;
-}
-
-br::selection {
-  background-color: rgba(77, 228, 236, 0.3568627451);
-  color: #000000;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+b {
+  cursor: context-menu;
 }
 
 * {
@@ -527,7 +503,7 @@ body main .s-3 .main-circle .circle h1:hover {
 }
 body main .s-3 .main-circle .circle .box-line {
   width: 100px;
-  height: 5px;
+  height: 10px;
   border: 3px #4de3ec solid;
   border-radius: 1px;
 }
@@ -828,6 +804,16 @@ body .about {
   align-items: center;
   gap: 50px;
 }
+body .about h2:hover,
+body .about h1:hover,
+body .about p:hover {
+  transform: scale(1.02);
+}
+body .about h2,
+body .about h1,
+body .about p {
+  transition: all 0.2s;
+}
 body .about .s-1 {
   width: 100%;
   display: flex;
@@ -885,7 +871,7 @@ body .about .s-2 .main .con1 .load {
 }
 body .about .s-2 .main .con1 .load .in {
   position: relative;
-  background-color: #fff;
+  background-color: #42bdc6;
   height: 2.5px;
 }
 body .about .s-2 .main .con1 .load .in p {
@@ -918,6 +904,7 @@ body .about .s-2 .main .con2 {
 }
 body .about .s-2 .main .con2 h1 {
   font-size: 3rem;
+  transition: all 0.2s;
 }
 body .about .s-2 .main .con2 h1 b {
   font-size: 1rem;
@@ -1151,14 +1138,21 @@ body .Introduction .box {
   border-radius: 15px;
   border-top: #42bdc6 3px solid;
   width: 400px;
-  height: 420px;
+  height: 440px;
   background-color: #131524;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4588235294);
+}
+body .Introduction .box h1 {
+  font-size: 1.5rem;
+  transition: all 0.2s;
+}
+body .Introduction .box h1:hover {
+  transform: scale(1.05);
 }
 body .Introduction .box button {
   background: #000000;
@@ -1171,6 +1165,7 @@ body .Introduction .box button {
   box-shadow: 0px 0px 20px rgba(66, 189, 198, 0.4117647059);
   transition: all 0.2s;
   font-size: 1.1rem;
+  font-weight: 700;
 }
 body .Introduction .box button:hover {
   box-shadow: 0px 0px 50px rgba(66, 189, 198, 0.4117647059);
@@ -1366,14 +1361,23 @@ body .Introduction .box button:hover {
 .webs .webs-main .use-html .min-box .box p {
   font-size: 0.8rem;
   font-weight: 300;
+  transition: all 0.2s;
+  margin-bottom: 5px;
+}
+.webs .webs-main .use-html .min-box .box p:hover {
+  transform: scale(1.05);
 }
 .webs .webs-main .use-html .min-box .box h2 {
   color: rgb(0, 200, 0);
   font-size: 0.85rem;
+  transition: all 0.2s;
 }
 .webs .webs-main .use-html .min-box .box h2 b {
   color: white;
   font-size: 1rem;
+}
+.webs .webs-main .use-html .min-box .box h2:hover {
+  transform: scale(1.05);
 }
 .webs .webs-main .use-html .min-box .box .box-in {
   background-color: #61199b;
@@ -1463,15 +1467,33 @@ body .Introduction .box button:hover {
   justify-content: space-between;
   padding: 20px;
   border-radius: 10px;
+  transition: all 0.2s;
 }
 .webs .webs-main .use-html .min-box2 .seo .persent div {
   text-align: center;
 }
 .webs .webs-main .use-html .min-box2 .seo .persent div h2 {
-  margin: 5px;
+  text-align: center;
+  transition: all 0.2s;
+}
+.webs .webs-main .use-html .min-box2 .seo .persent div h2:hover {
+  transform: scale(1.05);
+}
+.webs .webs-main .use-html .min-box2 .seo .persent div p {
+  transition: all 0.2s;
+}
+.webs .webs-main .use-html .min-box2 .seo .persent div p:hover {
+  transform: scale(1.05);
 }
 .webs .webs-main .use-html .min-box2 .seo .persent p {
+  transition: all 0.2s;
   text-align: center;
+}
+.webs .webs-main .use-html .min-box2 .seo .persent p:hover {
+  transform: scale(1.1);
+}
+.webs .webs-main .use-html .min-box2 .seo .persent:hover {
+  transform: scale(1.05);
 }
 .webs .webs-main .use-html .min-box2 .user {
   border-radius: 15px;
@@ -1501,14 +1523,26 @@ body .Introduction .box button:hover {
   width: 175px;
   padding: 20px;
   border-radius: 10px;
+  transition: all 0.2s;
 }
 .webs .webs-main .use-html .min-box2 .user .main .main-box .box h2 {
   font-size: 1.2rem;
   font-weight: 700;
+  transition: all 0.2s;
+}
+.webs .webs-main .use-html .min-box2 .user .main .main-box .box h2:hover {
+  transform: scale(1.05);
 }
 .webs .webs-main .use-html .min-box2 .user .main .main-box .box p {
   font-size: 0.8rem;
   font-weight: 400;
+  transition: all 0.2s;
+}
+.webs .webs-main .use-html .min-box2 .user .main .main-box .box p:hover {
+  transform: scale(1.05);
+}
+.webs .webs-main .use-html .min-box2 .user .main .main-box .box:hover {
+  transform: scale(1.05);
 }
 .webs .webs-main .use-html .min-box2 .user .main .circle {
   position: relative;
@@ -1524,6 +1558,10 @@ body .Introduction .box button:hover {
   font-weight: 900;
   font-size: 1.5rem;
   text-align: center;
+  transition: all 0.2s;
+}
+.webs .webs-main .use-html .min-box2 .user .main .circle h2:hover {
+  transform: scale(1.05);
 }
 .webs .webs-main .use-html .min-box2 .user .main .circle h2::before {
   text-align: center;
@@ -1645,6 +1683,295 @@ body .Introduction .box button:hover {
   font-weight: bold;
   margin-bottom: 30px;
   color: #ffffff;
+}
+.webs .sing_up {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.webs .sing_up section {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #131524;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0px 0px 15px rgba(55, 165, 171, 0.3843137255);
+}
+.webs .sing_up section h1 {
+  font-size: 2rem;
+}
+.webs .sing_up section p {
+  margin-top: -10px;
+}
+.webs .sing_up section p a {
+  color: #458fff;
+}
+.webs .sing_up section input[type=submit] {
+  width: 520px;
+  background-color: #00000f;
+  color: #4de3ec;
+  padding: 10px;
+  border: 1px #4de3ec solid;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 10px rgba(77, 228, 236, 0.3960784314);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.webs .sing_up section input[type=submit]:hover {
+  box-shadow: 0px 0px 20px rgba(77, 228, 236, 0.3960784314);
+  transform: scale(1.05);
+}
+.webs .sing_up section input {
+  margin-bottom: 20px;
+}
+.webs .sing_up section .name {
+  display: flex;
+  gap: 20px;
+}
+.webs .sing_up section .name .nebula-input {
+  position: relative;
+  width: 250px;
+}
+.webs .sing_up section .name .nebula-input .input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #2a2a3a;
+  background: #00000f;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  border-radius: 8px;
+  transition: all 0.4s ease-out;
+}
+.webs .sing_up section .name .nebula-input .user-label {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  pointer-events: none;
+  color: #6a6a8a;
+  transition: all 0.4s ease-out;
+  background: #00000f;
+  padding: 0 5px;
+}
+.webs .sing_up section .name .nebula-input .input:focus {
+  border-color: #b56aff;
+  box-shadow: 0 5px 8px rgba(181, 106, 255, 0.3), 0 10px 20px rgba(181, 106, 255, 0.2), 0 15px 40px rgba(181, 106, 255, 0.15), 0 20px 60px rgba(181, 106, 255, 0.1);
+}
+.webs .sing_up section .name .nebula-input .input:focus ~ .user-label,
+.webs .sing_up section .name .nebula-input .input:valid ~ .user-label {
+  transform: translateY(-25px);
+  font-size: 12px;
+  color: #d18cff;
+  left: 10px;
+}
+.webs .sing_up section .name .nebula-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  top: 50%;
+  left: 10px;
+  filter: blur(0.8px);
+  mix-blend-mode: screen;
+  transition: opacity 0.3s ease;
+}
+.webs .sing_up section .name .nebula-input .input:focus ~ .nebula-particle {
+  animation: nebula-float 2s forwards ease-out;
+}
+@keyframes nebula-float {
+  0% {
+    transform: translate(0, -50%) scale(0.8);
+    opacity: 0;
+    background: #c774ff;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(calc(var(--x) * 140px), calc(var(--y) * 35px)) scale(1.1);
+    opacity: 0;
+    background: #6df2ff;
+  }
+}
+.webs .sing_up section .nebula-input {
+  position: relative;
+  width: 520px;
+}
+.webs .sing_up section .nebula-input .input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #2a2a3a;
+  background: #00000f;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  border-radius: 8px;
+  transition: all 0.4s ease-out;
+}
+.webs .sing_up section .nebula-input .user-label {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  pointer-events: none;
+  color: #6a6a8a;
+  transition: all 0.4s ease-out;
+  background: #00000f;
+  padding: 0 5px;
+}
+.webs .sing_up section .nebula-input .input:focus {
+  border-color: #b56aff;
+  box-shadow: 0 5px 8px rgba(181, 106, 255, 0.3), 0 10px 20px rgba(181, 106, 255, 0.2), 0 15px 40px rgba(181, 106, 255, 0.15), 0 20px 60px rgba(181, 106, 255, 0.1);
+}
+.webs .sing_up section .nebula-input .input:focus ~ .user-label,
+.webs .sing_up section .nebula-input .input:valid ~ .user-label {
+  transform: translateY(-25px);
+  font-size: 12px;
+  color: #d18cff;
+  left: 10px;
+}
+.webs .sing_up section .nebula-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  top: 50%;
+  left: 10px;
+  filter: blur(0.8px);
+  mix-blend-mode: screen;
+  transition: opacity 0.3s ease;
+}
+.webs .sing_up section .nebula-input .input:focus ~ .nebula-particle {
+  animation: nebula-float 2s forwards ease-out;
+}
+@keyframes nebula-float {
+  0% {
+    transform: translate(0, -50%) scale(0.8);
+    opacity: 0;
+    background: #c774ff;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(calc(var(--x) * 140px), calc(var(--y) * 35px)) scale(1.1);
+    opacity: 0;
+    background: #6df2ff;
+  }
+}
+.webs .sing_up section .checkbox-wrapper {
+  display: flex;
+  align-items: center;
+}
+.webs .sing_up section .checkbox-wrapper::after {
+  content: "I agree with Terms and Privacy Policy";
+  margin-left: 20px;
+}
+.webs .sing_up section .checkbox-wrapper * {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+.webs .sing_up section .checkbox-wrapper input[type=checkbox] {
+  display: none;
+}
+.webs .sing_up section .checkbox-wrapper label {
+  --size: 20px;
+  --shadow: calc(var(--size) * 0.07) calc(var(--size) * 0.1);
+  position: relative;
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  background-color: #4158d0;
+  background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+  border-radius: 50%;
+  box-shadow: 0 var(--shadow) #ffbeb8;
+  cursor: pointer;
+  transition: 0.2s ease transform, 0.2s ease background-color, 0.2s ease box-shadow;
+  overflow: hidden;
+  z-index: 1;
+}
+.webs .sing_up section .checkbox-wrapper label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: calc(var(--size) * 0.7);
+  height: calc(var(--size) * 0.7);
+  margin: 0 auto;
+  background-color: #fff;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  box-shadow: inset 0 var(--shadow) #ffbeb8;
+  transition: 0.2s ease width, 0.2s ease height;
+}
+.webs .sing_up section .checkbox-wrapper label:hover:before {
+  width: calc(var(--size) * 0.55);
+  height: calc(var(--size) * 0.55);
+  box-shadow: inset 0 var(--shadow) #ff9d96;
+}
+.webs .sing_up section .checkbox-wrapper label:active {
+  transform: scale(0.9);
+}
+.webs .sing_up section .checkbox-wrapper .tick_mark {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  left: calc(var(--size) * -0.05);
+  width: calc(var(--size) * 0.6);
+  height: calc(var(--size) * 0.6);
+  margin: 0 auto;
+  margin-left: calc(var(--size) * 0.14);
+  transform: rotateZ(-40deg);
+}
+.webs .sing_up section .checkbox-wrapper .tick_mark:before,
+.webs .sing_up section .checkbox-wrapper .tick_mark:after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  border-radius: 2px;
+  opacity: 0;
+  transition: 0.2s ease transform, 0.2s ease opacity;
+}
+.webs .sing_up section .checkbox-wrapper .tick_mark:before {
+  left: 0;
+  bottom: 0;
+  width: calc(var(--size) * 0.1);
+  height: calc(var(--size) * 0.3);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.23);
+  transform: translateY(calc(var(--size) * -0.68));
+}
+.webs .sing_up section .checkbox-wrapper .tick_mark:after {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(var(--size) * 0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.23);
+  transform: translateX(calc(var(--size) * 0.78));
+}
+.webs .sing_up section .checkbox-wrapper input[type=checkbox]:checked + label {
+  background-color: #4158d0;
+  background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.webs .sing_up section .checkbox-wrapper input[type=checkbox]:checked + label:before {
+  width: 0;
+  height: 0;
+}
+.webs .sing_up section .checkbox-wrapper input[type=checkbox]:checked + label .tick_mark:before,
+.webs .sing_up section .checkbox-wrapper input[type=checkbox]:checked + label .tick_mark:after {
+  transform: translate(0);
+  opacity: 1;
 }
 
 .title {
