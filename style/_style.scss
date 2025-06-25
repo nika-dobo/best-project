@@ -1162,3 +1162,80 @@ body {
     }
   }
 }
+.title {
+  font-size: 24px;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.infographic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "card1 center card4"
+    "card2 center card3";
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+}
+.card {
+  background: rgb(19, 21, 36);
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+.card h2 {
+  margin: 0.5rem 0 0.3rem;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.card p {
+  margin: 0;
+  font-size: 14px;
+  color: #34a9af;
+}
+.card .icon {
+  font-size: 24px;
+  margin-bottom: 0.3rem;
+}
+.number {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: #4b0082;
+  color: white;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  border-radius: 0 0 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card1 {
+  grid-area: card1;
+}
+.card2 {
+  grid-area: card2;
+}
+.card3 {
+  grid-area: card3;
+}
+.card4 {
+  grid-area: card4;
+}
+.center-planet {
+  grid-area: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .circle {
+    background: url(/img/python_logo-removebg-preview.png);
+    background-size: cover;
+    width: 120px;
+    height: 120px;
+  }
+}
