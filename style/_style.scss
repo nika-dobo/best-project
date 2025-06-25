@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .loading {
   background: #000000;
@@ -625,7 +630,7 @@ body {
   }
   footer {
     overflow: hidden;
-    margin-top: -10px;
+    margin-top: -40px;
     width: 100%;
     height: 150px;
     display: flex;
@@ -750,7 +755,7 @@ body {
         gap: 10px;
         .box {
           border-radius: 10px;
-          width: 275px;
+          width: 300px;
           padding: 15px;
           background-color: #131524;
           border-top: #4de3ec 5px solid;
@@ -763,17 +768,18 @@ body {
           transform: scale(1.05);
         }
         .d1 {
-          height: 200px;
+          height: 230px;
         }
         .d2 {
-          height: 300px;
+          height: 330px;
         }
         .d3 {
-          height: 383px;
+          height: 413px;
         }
         .d4 {
           height: 493px;
           ul {
+            padding: 0px 30px;
             list-style-position: outside;
             li {
               margin-top: 5px;
@@ -811,6 +817,8 @@ body {
             margin-bottom: 15px;
           }
           ul {
+            list-style-position: outside;
+            padding: 30px;
             li {
               margin-top: 10px;
               transition: all 0.2s;
@@ -823,6 +831,150 @@ body {
       }
       .in3 {
         margin-top: -50px;
+      }
+    }
+    .use-html {
+      width: 100%;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      .min-box {
+        margin-left: -10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 1340px;
+        justify-content: center;
+        gap: 15px;
+        .box {
+          width: 320px;
+          background: #1b0f2a;
+          padding: 10px;
+          border-radius: 7.5px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          transition: all 0.2s;
+          p {
+            font-size: 0.8rem;
+            font-weight: 300;
+          }
+          h2 {
+            color: rgb(0, 200, 0);
+            font-size: 0.85rem;
+            b {
+              color: white;
+              font-size: 1rem;
+            }
+          }
+          .box-in {
+            background-color: #61199b;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            transition: all 0.2s;
+          }
+          .box-in:hover {
+            background-color: #8c00ff;
+          }
+        }
+        .box:hover {
+          background-color: #20162c;
+        }
+      }
+      .min-box2 {
+        display: flex;
+        width: 1350px;
+        justify-content: center;
+        gap: 15px;
+        .vis {
+          background-color: #1b0f2a;
+          border-radius: 7.5px;
+          width: 575px;
+          height: 320px;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          canvas {
+            height: 500px;
+          }
+          h2 {
+            margin-top: 10px;
+            margin-left: 30px;
+          }
+        }
+
+        .seo {
+          position: relative;
+          border-radius: 7.5px;
+          padding: 10px;
+          background-color: #1b0f2a;
+          width: 402.5px;
+          height: 320px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+          h2 {
+            width: 100%;
+            text-align: start;
+            font-size: 1.1rem;
+          }
+          p {
+            width: 100%;
+            text-align: start;
+            font-size: 0.9rem;
+            color: #696d83;
+            margin-bottom: 30px;
+          }
+          .circle {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 7px #0266e100 solid;
+            border-top: 7px #0268e1 solid;
+            border-left: 7px #0268e1 solid;
+            animation: load 5s infinite linear;
+          }
+          @keyframes load {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+          .persent {
+            position: absolute;
+            width: 90%;
+            height: 80px;
+            background-color: #351e41;
+            bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 10px;
+            div {
+              text-align: center;
+              h2 {
+                margin: 5px;
+              }
+            }
+            p {
+              text-align: center;
+            }
+          }
+        }
+        .user {
+          border-radius: 7.5px;
+          padding: 10px;
+          background-color: #1b0f2a;
+          width: 532.5px;
+          height: 320px;
+        }
       }
     }
   }

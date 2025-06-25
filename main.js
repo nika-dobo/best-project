@@ -58,3 +58,4 @@ function animate() {
 animate();
 
 window.addEventListener("resize", resizeCanvas);
+
