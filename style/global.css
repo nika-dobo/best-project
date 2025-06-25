@@ -498,11 +498,19 @@ body main .s-3 .main-circle .circle p {
   width: 400px;
   font-size: 0.95rem;
   cursor: context-menu;
+  z-index: 5;
+  transition: 0.2s all;
 }
 body main .s-3 .main-circle .circle h1 {
   font-size: 1.5rem;
   text-shadow: 0px 0px 15px #4de3ec;
   cursor: context-menu;
+  z-index: 5;
+  transition: 0.2s all;
+}
+body main .s-3 .main-circle .circle p:hover,
+body main .s-3 .main-circle .circle h1:hover {
+  transform: scale(1.05);
 }
 body main .s-3 .main-circle .circle .box-line {
   width: 100px;
@@ -981,8 +989,8 @@ body footer .soc .fc {
 .webs .webs-main .use-html .min-box .box {
   width: 320px;
   background: #1b0f2a;
-  padding: 10px;
-  border-radius: 7.5px;
+  padding: 15px 20px;
+  border-radius: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1021,7 +1029,7 @@ body footer .soc .fc {
 }
 .webs .webs-main .use-html .min-box2 .vis {
   background-color: #1b0f2a;
-  border-radius: 7.5px;
+  border-radius: 15px;
   width: 575px;
   height: 320px;
   padding: 10px;
@@ -1038,8 +1046,8 @@ body footer .soc .fc {
 }
 .webs .webs-main .use-html .min-box2 .seo {
   position: relative;
-  border-radius: 7.5px;
-  padding: 10px;
+  border-radius: 15px;
+  padding: 20px;
   background-color: #1b0f2a;
   width: 402.5px;
   height: 320px;
@@ -1065,9 +1073,9 @@ body footer .soc .fc {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  border: 7px rgba(2, 102, 225, 0) solid;
-  border-top: 7px #0268e1 solid;
-  border-left: 7px #0268e1 solid;
+  border: 8px rgba(2, 102, 225, 0) solid;
+  border-top: 8px #0268e1 solid;
+  border-left: 8px #0268e1 solid;
   animation: load 5s infinite linear;
 }
 @keyframes load {
@@ -1099,9 +1107,175 @@ body footer .soc .fc {
   text-align: center;
 }
 .webs .webs-main .use-html .min-box2 .user {
-  border-radius: 7.5px;
-  padding: 10px;
+  border-radius: 15px;
+  padding: 20px;
   background-color: #1b0f2a;
   width: 532.5px;
   height: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.webs .webs-main .use-html .min-box2 .user h2 {
+  font-size: 1.2rem;
+}
+.webs .webs-main .use-html .min-box2 .user .main {
+  display: flex;
+  justify-content: space-between;
+}
+.webs .webs-main .use-html .min-box2 .user .main .main-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.webs .webs-main .use-html .min-box2 .user .main .main-box .box {
+  font-size: 1rem;
+  background-color: #351e41;
+  width: 175px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.webs .webs-main .use-html .min-box2 .user .main .main-box .box h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.webs .webs-main .use-html .min-box2 .user .main .main-box .box p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.webs .webs-main .use-html .min-box2 .user .main .circle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.webs .webs-main .use-html .min-box2 .user .main .circle h2 {
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.webs .webs-main .use-html .min-box2 .user .main .circle h2::before {
+  text-align: center;
+  font-size: 0.9rem;
+  content: "Avg.";
+  font-weight: 500;
+  opacity: 0.5;
+}
+.webs .webs-main .use-html .min-box2 .user .main .circle h2::after {
+  text-align: center;
+  font-size: 0.9rem;
+  content: "Daily";
+  font-weight: 500;
+  opacity: 0.5;
+}
+.webs .webs-main .use-html .min-box2 .user .main .circle div {
+  position: absolute;
+  border: 7px solid rgba(11, 134, 107, 0);
+  border-top: 7px solid #0b866c;
+  border-left: 7px solid #0b866c;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: rotate 3s infinite linear;
+}
+.webs .webs-main2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.webs .webs-main2 .main-box2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  width: 40%;
+  height: 500px;
+  background-color: #120d2b;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.webs .webs-main2 .main-box2 .box {
+  position: relative;
+  background-color: red;
+  border-radius: 20px 20px 0px 0px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px -40px 0px #2e264b;
+}
+.webs .webs-main2 .main-box2 h2 {
+  position: absolute;
+  top: -60px;
+}
+.webs .webs-main2 .main-box2 .b1 {
+  grid-column: 1/2;
+  grid-row: 3/11;
+  background-color: rgb(135, 64, 255);
+}
+.webs .webs-main2 .main-box2 .b2 {
+  grid-column: 2/3;
+  grid-row: 5/11;
+  background-color: rgb(116, 34, 255);
+}
+.webs .webs-main2 .main-box2 .b3 {
+  grid-column: 3/4;
+  grid-row: 7/11;
+  background-color: rgb(95, 0, 255);
+}
+.webs .webs-main2 .main-box3 {
+  width: 40%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+.webs .webs-main2 .main-box3 .container {
+  max-width: 600px;
+  text-align: start;
+  padding: 2rem;
+}
+.webs .webs-main2 .main-box3 .experience-box {
+  display: inline-block;
+  padding: 10px 0px;
+  margin-bottom: 20px;
+}
+.webs .webs-main2 .main-box3 .experience-box span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+.webs .webs-main2 .main-box3 .experience-box p {
+  margin: 0;
+  color: #bbb;
+  font-size: 0.9rem;
+}
+.webs .webs-main2 .main-box3 .stats {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+.webs .webs-main2 .main-box3 .stat h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #ffffff;
+}
+.webs .webs-main2 .main-box3 .stat p {
+  margin: 5px 0 0;
+  color: #bbb;
+  font-size: 0.95rem;
+}
+.webs .webs-main2 .main-box3 .description {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.webs .webs-main2 .main-box3 .tagline {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ffffff;
 }/*# sourceMappingURL=global.css.map */
