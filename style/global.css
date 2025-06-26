@@ -1248,6 +1248,9 @@ body .accaunt section .main .info .len {
   justify-items: center;
   align-items: center;
 }
+body .accaunt section .main .info .len a {
+  color: #42bdc6;
+}
 body .accaunt section .main .info .len div {
   width: 75px;
   background-color: #00000f;
