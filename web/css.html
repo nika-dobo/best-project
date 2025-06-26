@@ -89,15 +89,21 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            if (localStorage.getItem("loggedIn") === "true") {
-                const signUpLink = document.getElementById("signUpLink");
-                if (signUpLink) {
+            const isLoggedIn = localStorage.getItem("loggedIn");
+            const signUpLink = document.getElementById("signUpLink");
+
+            if (signUpLink) {
+                if (isLoggedIn === "true") {
                     signUpLink.textContent = "Accaunt";
                     signUpLink.href = "/web/accaunt.html";
+                } else {
+                    signUpLink.textContent = "Sing Up";
+                    signUpLink.href = "/web/sing_up.html";
                 }
             }
         });
     </script>
+
 </body>
 
 </html>
