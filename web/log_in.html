@@ -19,7 +19,7 @@
                 <a href="/main.html">Main</a>
                 <a href="/web/Introduction.html">Introduction</a>
                 <a href="/web/about.html">About</a>
-                <a href="/web/sing_up.html">Sing Up</a>
+                <a href="/web/sing_up.html" id="signUpLink">Sing Up</a>
             </nav>
         </div>
 
@@ -32,8 +32,8 @@
             <form>
 
                 <div class="nebula-input">
-                    <input required="" type="email" name="text" autocomplete="off" class="input" />
-                    <label class="user-label">Last Name</label>
+                    <input required="" type="email" name="email" autocomplete="off" class="input" />
+                    <label class="user-label">Email</label>
                     <div class="nebula-particle" style="--x:0.2; --y:-0.4; --delay:0.1s"></div>
                     <div class="nebula-particle" style="--x:0.5; --y:-0.2; --delay:0.3s"></div>
                     <div class="nebula-particle" style="--x:0.3; --y:0.3; --delay:0.5s"></div>
@@ -43,8 +43,8 @@
                 </div>
 
                 <div class="nebula-input">
-                    <input required="" type="password" name="text" autocomplete="off" class="input" />
-                    <label class="user-label">Last Name</label>
+                    <input required="" type="password" name="password" autocomplete="off" class="input" />
+                    <label class="user-label">Password</label>
                     <div class="nebula-particle" style="--x:0.2; --y:-0.4; --delay:0.1s"></div>
                     <div class="nebula-particle" style="--x:0.5; --y:-0.2; --delay:0.3s"></div>
                     <div class="nebula-particle" style="--x:0.3; --y:0.3; --delay:0.5s"></div>
@@ -52,8 +52,6 @@
                     <div class="nebula-particle" style="--x:0.1; --y:-0.7; --delay:0.4s"></div>
                     <div class="nebula-particle" style="--x:0.6; --y:0.4; --delay:0.6s"></div>
                 </div>
-
-
 
                 <input type="submit" value="Log in">
             </form>
@@ -80,6 +78,45 @@
         </div>
     </footer>
 
+    <script>
+        document.getElementById("login-form").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            try {
+                const response = await fetch("http://127.0.0.1:5000/login", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    localStorage.setItem("loggedIn", "true");
+                    window.location.href = "/web/accaunt.html";
+                } else {
+                    alert("Login failed: " + result.message);
+                }
+            } catch (error) {
+                alert("Server error");
+                console.error(error);
+            }
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (localStorage.getItem("loggedIn") === "true") {
+                const signUpLink = document.getElementById("signUpLink");
+                if (signUpLink) {
+                    signUpLink.textContent = "Accaunt";
+                    signUpLink.href = "/web/accaunt.html";
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

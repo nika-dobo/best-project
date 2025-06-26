@@ -19,7 +19,7 @@
                 <a href="/main.html">Main</a>
                 <a href="/web/Introduction.html">Introduction</a>
                 <a href="/web/about.html">About</a>
-                <a href="/web/sing_up.html">Sing Up</a>
+                <a href="/web/sing_up.html" id="signUpLink">Sing Up</a>
             </nav>
         </div>
     </header>
@@ -56,7 +56,7 @@
 
                 <div class="center-planet">
                     <div class="circle">
-                        
+
                     </div>
                 </div>
 
@@ -100,6 +100,17 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (localStorage.getItem("loggedIn") === "true") {
+                const signUpLink = document.getElementById("signUpLink");
+                if (signUpLink) {
+                    signUpLink.textContent = "Accaunt";
+                    signUpLink.href = "/web/accaunt.html";
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
