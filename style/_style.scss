@@ -1157,6 +1157,205 @@ body {
       }
     }
   }
+  .c {
+    .leter {
+      position: relative;
+      animation: dis 1s forwards;
+      animation-delay: 3.5s;
+      .let {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        opacity: 0;
+        animation: top 3s 1 forwards;
+      }
+      .top {
+        border: 12.5px #03193000 solid;
+        border-top: 12.5px #4de3ec solid;
+        top: -100px;
+        right: -400px;
+        transform: rotate(45deg);
+      }
+      .left {
+        border: 12.5px #03193000 solid;
+        border-left: 12.5px #4de3ec solid;
+        top: -50px;
+        right: 400px;
+        transform: rotate(-60deg);
+      }
+      .bottom {
+        border: 12.5px #03193000 solid;
+        border-bottom: 12.5px #4de3ec solid;
+        top: -150px;
+        right: 0px;
+        transform: rotate(180deg);
+      }
+      @keyframes top {
+        0% {
+          opacity: 0;
+          transform: rotate(360deg);
+        }
+        25% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+          top: 0px;
+          right: -100px;
+          transform: rotate(0deg);
+        }
+      }
+      .boom {
+        background-color: #ff0000;
+        border-radius: 50%;
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        top: -10px;
+        left: -10px;
+        opacity: 0;
+        animation: boom 0.5s 1 forwards;
+        animation-delay: 2.5s;
+      }
+      @keyframes boom {
+        0% {
+          opacity: 0.2;
+          background-color: #000000;
+        }
+        5% {
+          opacity: 0.5;
+          background-color: #000000;
+        }
+        10% {
+          opacity: 0.7;
+          background-color: #000000;
+        }
+        15% {
+          opacity: 1;
+          background-color: #000000;
+        }
+        40% {
+          background: radial-gradient(
+            circle,
+            rgba(255, 0, 0, 0.3) 20%,
+            black 80%
+          );
+          top: -25px;
+          left: -25px;
+          width: 150px;
+          height: 150px;
+        }
+        75% {
+          background: radial-gradient(
+            circle,
+            rgba(255, 0, 0, 0.5),
+            black,
+            rgba(255, 0, 0, 0.1)
+          );
+          top: -37.5px;
+          left: -37.5px;
+          width: 175px;
+          height: 175px;
+          opacity: 1;
+        }
+        100% {
+          background: radial-gradient(
+            circle,
+            rgba(255, 0, 0, 0.7),
+            black,
+            rgba(255, 0, 0, 0.1)
+          );
+          top: -50px;
+          left: -50px;
+          width: 200px;
+          height: 200px;
+          opacity: 0;
+        }
+      }
+      @keyframes dis {
+        0% {
+        }
+        100% {
+          display: none;
+        }
+      }
+    }
+    .main {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 150px;
+      opacity: 0;
+      animation: see 1s 1 forwards;
+      animation-delay: 4.2s;
+      .left {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        h2 {
+          font-size: 1.6rem;
+          font-weight: 600;
+          transition: all 0.2s;
+        }
+        p {
+          font-size: 1.1rem;
+          line-height: 22px;
+          transition: all 0.2s;
+        }
+        p:hover,
+        h2:hover {
+          transform: scale(1.05);
+        }
+      }
+      .right {
+        width: 40%;
+        display: grid;
+        grid-template-columns: 250px 250px;
+        grid-template-rows: 200px 200px;
+        gap: 20px;
+        .box {
+          width: 100%;
+          background-color: #2e0f38;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 30px;
+          border-radius: 5px;
+          transition: all 0.2s;
+          h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.2s;
+          }
+          p {
+            font-size: 0.95rem;
+            transition: all 0.2s;
+          }
+          p:hover,
+          h3:hover {
+            transform: scale(1.05);
+          }
+        }
+        .box:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+    @keyframes see {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .webs {
