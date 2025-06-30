@@ -4,9 +4,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Run Node.js App",
+      "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/web/codewars/app.js",
+      "program": "${workspaceFolder}\\web\\codewars\\app.js",
       "runtimeExecutable": "C:/Program Files/nodejs/node.exe"
     }
   ]
